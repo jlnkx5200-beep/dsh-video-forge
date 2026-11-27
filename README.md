@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-3DA639.svg)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/jlnkx5200-beep/dsh-video-forge/ci.yml?branch=main&label=ci)](../../actions/workflows/ci.yml)
-[![Tests](https://img.shields.io/badge/tests-41%20%2B%2050%20passing-2ea043.svg)](#engineering-gates)
+[![Tests](https://img.shields.io/badge/tests-41%20%2B%2050-2ea043.svg)](#engineering-gates)
 [![Remotion](https://img.shields.io/badge/renderer-Remotion%204.0-0B84F3.svg)](https://www.remotion.dev/)
 [![Three.js](https://img.shields.io/badge/stage-Three.js%200.180-000000.svg)](https://threejs.org/)
 [![DSH Plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4D6BFE.svg)](docs/architecture.md)
@@ -212,7 +212,7 @@ Every claim above is backed by a command that fails loudly. All eight run withou
 | 4 | Visual red lines | `node scripts/check-quality.mjs` | six dimensions per preset, no fake algorithms |
 | 5 | Golden frames | `node scripts/check-frames.mjs` | re-render is bit-stable (`maxDiff = 0`) |
 | 6 | Node tests | `npm test` | 41 cases: contracts, cache, scheduler, providers, plan parsing |
-| 7 | Python nodes | `bash comfyui-nodes/dsh-video-assets/tests/run_checks.sh` | 50 cases: 8 nodes, tensor ops, HTTP bridge |
+| 7 | Python nodes | `bash comfyui-nodes/dsh-video-assets/tests/run_checks.sh` | 50 cases: 8 nodes, tensor ops, HTTP bridge. With the ComfyUI venv: 50 pass; on a bare interpreter (as in CI) the 17 torch-backed cases skip |
 | 8 | Hygiene | `node scripts/check-hygiene.mjs` | no secrets, no machine paths, no blob > 5 MB |
 
 **Tests: 41 node + 50 Python.** The visual half cannot be automated, so it is a written

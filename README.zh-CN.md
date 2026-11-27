@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-3DA639.svg)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/jlnkx5200-beep/dsh-video-forge/ci.yml?branch=main&label=ci)](../../actions/workflows/ci.yml)
-[![Tests](https://img.shields.io/badge/tests-41%20%2B%2050%20passing-2ea043.svg)](#工程门禁)
+[![Tests](https://img.shields.io/badge/tests-41%20%2B%2050-2ea043.svg)](#工程门禁)
 [![Remotion](https://img.shields.io/badge/renderer-Remotion%204.0-0B84F3.svg)](https://www.remotion.dev/)
 [![Three.js](https://img.shields.io/badge/stage-Three.js%200.180-000000.svg)](https://threejs.org/)
 [![DSH Plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4D6BFE.svg)](docs/architecture.md)
@@ -198,7 +198,7 @@ video_forge_produce({
 | 4 | 画质红线 | `node scripts/check-quality.mjs` | 每个预设六维度显式声明、禁止伪算法 |
 | 5 | 黄金帧 | `node scripts/check-frames.mjs` | 重渲染比特级稳定（`maxDiff = 0`） |
 | 6 | Node 单测 | `npm test` | 41 条：契约、缓存、调度、Provider、方案解析 |
-| 7 | Python 节点 | `bash comfyui-nodes/dsh-video-assets/tests/run_checks.sh` | 50 条：8 节点、张量、HTTP 桥 |
+| 7 | Python 节点 | `bash comfyui-nodes/dsh-video-assets/tests/run_checks.sh` | 50 条：8 节点、张量、HTTP 桥。接 ComfyUI venv 时 50 条全过；裸解释器（CI 即如此）会 skip 17 条依赖 torch 的用例 |
 | 8 | 仓库体检 | `node scripts/check-hygiene.mjs` | 无密钥、无本机路径、无 > 5 MB 文件 |
 
 **测试：41 条 Node + 50 条 Python。** 视觉这一半无法自动判定，所以它是写下来的流程而不是脚本：
