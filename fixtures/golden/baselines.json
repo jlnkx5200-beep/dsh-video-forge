@@ -1,0 +1,23 @@
+{
+  "$comment": "像素回归基线：由 node scripts/gen-golden.mjs 生成；node scripts/check-frames.mjs 校验。maxDiff 为单通道 0–255 的容差。",
+  "version": 1,
+  "plan": "golden/golden-baseline-v1/plan.json",
+  "planId": "golden-baseline-v1",
+  "size": {
+    "width": 960,
+    "height": 540,
+    "fps": 24
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "png": "golden-baseline-v1-f000.png",
+      "maxDiff": 2
+    },
+    {
+      "frame": 24,
+      "png": "golden-baseline-v1-f024.png",
+      "maxDiff": 2
+    }
+  ]
+}

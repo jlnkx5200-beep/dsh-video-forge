@@ -1,0 +1,16 @@
+node_modules/
+lib/
+remotion/out/
+remotion/public/forge/
+*.log
+
+__pycache__/
+*.pyc
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tgz
+coverage/

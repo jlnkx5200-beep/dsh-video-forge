@@ -1,0 +1,14 @@
+# Video Forge 视频锻造工坊 —— profile bundle 装配行。
+#
+# 同 dsh-seedream：name 必须是完整包名，client 半才挂得上。
+# 这里只放**非机密**默认值；API Key 走环境变量或 ~/.dsh/video-forge.json。
+- insert:
+    - id: dsh-video-forge
+      name: '@dsh-external/dsh-video-forge'
+      config:
+        arkBaseUrl: https://ark.cn-beijing.volces.com/api/v3
+        defaultSeedreamModel: 5.0-flash
+        minimaxBaseUrl: https://api.minimaxi.com
+        defaultMinimaxModel: MiniMax-H3
+        comfyBaseUrl: http://127.0.0.1:8188
+        maxConcurrent: 3

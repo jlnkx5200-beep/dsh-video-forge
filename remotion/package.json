@@ -1,0 +1,29 @@
+{
+  "name": "dsh-video-forge-remotion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Video Forge 渲染内核：风格无关的 Three.js 舞台 + Remotion 确定性帧同步",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render",
+    "still": "node scripts/still.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "still:demo": "node scripts/still.mjs --composition=Demo-Parallax"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.484",
+    "@remotion/three": "4.0.484",
+    "@react-three/fiber": "9.8.2",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remotion": "4.0.484",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.180.0",
+    "typescript": "5.9.3"
+  }
+}

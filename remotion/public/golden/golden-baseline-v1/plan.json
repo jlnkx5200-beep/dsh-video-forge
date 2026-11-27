@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "id": "golden-baseline-v1",
+  "title": "Golden baseline（像素回归）",
+  "width": 960,
+  "height": 540,
+  "fps": 24,
+  "durationInFrames": 96,
+  "preset": "cinematic-realism",
+  "style": {
+    "tags": [
+      "cinematic"
+    ],
+    "palette": [
+      "#0b0f19",
+      "#1b2740",
+      "#e8ecf5"
+    ]
+  },
+  "shots": [
+    {
+      "id": "g1",
+      "index": 0,
+      "from": 0,
+      "durationInFrames": 48,
+      "strategy": "still-3d",
+      "shotSize": "wide",
+      "description": "全景",
+      "camera": {
+        "move": "dolly-in",
+        "from": {
+          "position": [
+            -0.03296,
+            0.228,
+            2.2
+          ],
+          "lookAt": [
+            0,
+            0,
+            -7.05
+          ]
+        },
+        "to": {
+          "position": [
+            -0.042624,
+            0.08224000000000001,
+            -0.6
+          ],
+          "lookAt": [
+            0,
+            0,
+            -7.05
+          ]
+        },
+        "fov": 42,
+        "easing": "smooth"
+      },
+      "postFX": [],
+      "assets": {
+        "still": "golden/golden-baseline-v1/mock_mock-image-1883093884.png"
+      },
+      "layer": {
+        "src": "golden/golden-baseline-v1/mock_mock-image-1883093884.png",
+        "parallax": 0.35,
+        "depth": 0
+      }
+    },
+    {
+      "id": "g2",
+      "index": 1,
+      "from": 48,
+      "durationInFrames": 48,
+      "strategy": "still-3d",
+      "shotSize": "medium",
+      "description": "中景",
+      "camera": {
+        "move": "orbit",
+        "from": {
+          "position": [
+            2.6,
+            0.35,
+            1.6
+          ],
+          "lookAt": [
+            0,
+            0,
+            -7.05
+          ]
+        },
+        "to": {
+          "position": [
+            -2.4,
+            0.15,
+            1.9
+          ],
+          "lookAt": [
+            0,
+            0,
+            -7.05
+          ]
+        },
+        "fov": 42,
+        "easing": "smooth"
+      },
+      "postFX": [],
+      "transitionIn": {
+        "type": "crossfade",
+        "durationInFrames": 12,
+        "direction": "left"
+      },
+      "assets": {
+        "still": "golden/golden-baseline-v1/mock_mock-image-1483875326.png"
+      },
+      "layer": {
+        "src": "golden/golden-baseline-v1/mock_mock-image-1483875326.png",
+        "parallax": 0.35,
+        "depth": 0
+      }
+    }
+  ],
+  "provenance": {
+    "compiler": "dsh-video-forge/bridge/compiler",
+    "strategy": "still-3d",
+    "shots": 2,
+    "videoEngines": [],
+    "job": "job-20261127041744",
+    "producedAt": "2026-11-27T04:17:44.939Z"
+  },
+  "createdAt": "1970-01-01T00:00:00.000Z"
+}

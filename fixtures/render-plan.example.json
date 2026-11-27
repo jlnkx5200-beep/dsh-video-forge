@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "id": "demo-contract",
+  "title": "契约示例 · 三分镜",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationInFrames": 390,
+  "preset": "parallax",
+  "style": {
+    "tags": [
+      "cinematic",
+      "ink",
+      "cool"
+    ],
+    "palette": [
+      "#0d1626",
+      "#8fb4d6",
+      "#d8e6f2"
+    ],
+    "fogColor": "#070a12",
+    "background": "#05060a"
+  },
+  "audio": {
+    "src": "forge/demo/audio/bed.wav",
+    "volume": 0.8,
+    "beats": [
+      0,
+      30,
+      60,
+      90
+    ]
+  },
+  "shots": [
+    {
+      "id": "s1",
+      "index": 0,
+      "from": 0,
+      "durationInFrames": 90,
+      "strategy": "seedream-static",
+      "shotSize": "wide",
+      "description": "建立镜头：水墨山脊在雾中显形",
+      "camera": {
+        "move": "dolly-in",
+        "from": {
+          "position": [
+            0,
+            1.4,
+            7
+          ],
+          "lookAt": [
+            0,
+            1.15,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            1.1,
+            -1.5
+          ],
+          "lookAt": [
+            0,
+            1,
+            -4
+          ]
+        },
+        "fov": 42,
+        "easing": "smooth"
+      },
+      "layer": {
+        "src": "forge/demo-contract/seedream-s1.jpg",
+        "depthSrc": "forge/demo-contract/depth-s1.png",
+        "matteSrc": "forge/demo-contract/matte-s1.png",
+        "parallax": 0.6,
+        "depth": 0.18
+      },
+      "postFX": [
+        "bloom"
+      ],
+      "transitionOut": {
+        "type": "crossfade",
+        "durationInFrames": 18
+      },
+      "assets": {
+        "still": "forge/demo-contract/seedream-s1.jpg",
+        "depth": "forge/demo-contract/depth-s1.png",
+        "matte": "forge/demo-contract/matte-s1.png"
+      }
+    },
+    {
+      "id": "s2",
+      "index": 1,
+      "from": 90,
+      "durationInFrames": 120,
+      "strategy": "minimax-direct",
+      "shotSize": "medium",
+      "description": "人物特写：H3 直出，视频贴在空间中",
+      "camera": {
+        "move": "handheld",
+        "from": {
+          "position": [
+            0,
+            1.6,
+            3.2
+          ],
+          "lookAt": [
+            0,
+            1.55,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0.2,
+            1.55,
+            2.4
+          ],
+          "lookAt": [
+            0.1,
+            1.5,
+            -1
+          ]
+        },
+        "fov": 36,
+        "easing": "easeInOut"
+      },
+      "video": {
+        "src": "forge/demo-contract/minimax-s2.mp4",
+        "blend": "luakay",
+        "opacity": 0.92,
+        "width": 20,
+        "height": 11.25,
+        "chromaKey": {
+          "color": "#00ff00",
+          "similarity": 0.4,
+          "smoothness": 0.1
+        }
+      },
+      "postFX": [
+        "dof"
+      ],
+      "transitionIn": {
+        "type": "crossfade",
+        "durationInFrames": 18
+      },
+      "transitionOut": {
+        "type": "luma-wipe",
+        "durationInFrames": 20
+      },
+      "assets": {
+        "video": "forge/demo-contract/minimax-s2.mp4"
+      }
+    },
+    {
+      "id": "s3",
+      "index": 2,
+      "from": 210,
+      "durationInFrames": 60,
+      "strategy": "still-3d",
+      "shotSize": "close",
+      "description": "收尾：拉远，露出空间阵列",
+      "camera": {
+        "move": "dolly-out",
+        "from": {
+          "position": [
+            0,
+            2,
+            -2
+          ],
+          "lookAt": [
+            0,
+            1.2,
+            -6
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            3.6,
+            14
+          ],
+          "lookAt": [
+            0,
+            1.6,
+            -4
+          ]
+        },
+        "fov": 48,
+        "easing": "smooth"
+      },
+      "layer": {
+        "src": "forge/demo-contract/seedream-s3.jpg",
+        "parallax": 0.25,
+        "depth": 0
+      },
+      "postFX": [],
+      "transitionIn": {
+        "type": "luma-wipe",
+        "durationInFrames": 20
+      },
+      "caption": "任何风格，同一套内核",
+      "assets": {
+        "still": "forge/demo-contract/seedream-s3.jpg"
+      }
+    },
+    {
+      "id": "s4",
+      "index": 3,
+      "from": 270,
+      "durationInFrames": 120,
+      "strategy": "magi2-i2v",
+      "shotSize": "medium",
+      "description": "MAGI-2 首帧驱动：15–30s 连续分镜，原生 1080p",
+      "camera": {
+        "move": "dolly-in",
+        "from": {
+          "position": [
+            0,
+            1.5,
+            5.2
+          ],
+          "lookAt": [
+            0,
+            1.35,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            1.25,
+            -1.2
+          ],
+          "lookAt": [
+            0,
+            1.2,
+            -4
+          ]
+        },
+        "fov": 40,
+        "easing": "smooth"
+      },
+      "video": {
+        "src": "forge/demo-contract/magi2-s4.mp4",
+        "blend": "normal",
+        "opacity": 1,
+        "width": 20,
+        "height": 11.25
+      },
+      "postFX": [],
+      "transitionIn": {
+        "type": "crossfade",
+        "durationInFrames": 18
+      },
+      "assets": {
+        "video": "forge/demo-contract/magi2-s4.mp4"
+      }
+    }
+  ],
+  "provenance": {
+    "storyboard": "video-shotcraft/storyboard#demo",
+    "seedreamModel": "5.0-flash",
+    "minimaxModel": "MiniMax-H3",
+    "minimaxResolution": "768P",
+    "magi2Model": "MAGI-2",
+    "videoEngines": [
+      "minimax",
+      "magi2"
+    ]
+  },
+  "createdAt": "2026-01-01T00:00:00.000Z"
+}
